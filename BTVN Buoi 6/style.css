@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("https://png.pngtree.com/thumb_back/fh260/background/20250307/pngtree-a-vibrant-movie-themed-background-with-the-film-reels-camera-and-image_17080149.jpg") no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.7)
+    );
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 360px;
+    padding: 36px 30px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2 {
+    color: #ffffff;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    transition: 0.25s;
+}
+
+input:focus {
+    box-shadow: 0 0 0 2px #ff6a88;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 35px rgba(255, 81, 47, 0.7);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+a {
+    color: #ffb6c9;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: 90%;
+        padding: 30px 22px;
+    }
+}
