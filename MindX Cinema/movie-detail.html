@@ -2,8 +2,10 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>SJC Cinemas | Trang chủ</title>
+    <title>Chi tiết phim | SJC Cinemas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS dùng chung -->
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
@@ -22,29 +24,35 @@
     </div>
 </header>
 
-<!-- ===== HERO / BANNER ===== -->
-<section class="movie-section">
-    <h2>Phim đang chiếu</h2>
-    <div class="movie-list" id="movieNow">
-        <!-- JS render phim đang chiếu -->
+<!-- ===== MOVIE DETAIL (JS RENDER) ===== -->
+<section class="movie-detail">
+    <div id="movieDetail">
+        <!-- JS sẽ render chi tiết phim tại đây -->
     </div>
 </section>
 
-<!-- ===== COMING SOON ===== -->
-<section class="movie-section">
-    <h2>Phim sắp chiếu</h2>
-    <div class="movie-list" id="movieSoon">
-        <!-- JS render phim sắp chiếu -->
-    </div>
+<!-- ===== COMMENT SECTION ===== -->
+<section class="comment-section">
+  <h2>💬 Bình luận</h2>
+
+  <!-- LOGIN -->
+  <div id="loginBox"></div>
+
+  <!-- COMMENT LIST -->
+  <div id="commentList"></div>
+
+  <!-- COMMENT INPUT -->
+  <div id="commentInputBox"></div>
 </section>
+
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
     <p>© 2025 SJC Cinemas Việt Nam</p>
-    <p>Hệ thống rạp chiếu phim hiện đại</p>
+    <p>Trải nghiệm điện ảnh đỉnh cao</p>
 </footer>
 
-<!-- ===== JS (API + Logic) ===== -->
+<!-- ===== JS (API + LOGIC) ===== -->
 <script src="script2.js"></script>
 
 </body>

@@ -38,18 +38,34 @@ function login() {
     const password = document.getElementById("loginPassword").value;
 
     let users = getUsers();
-    let user = users.find(u => u.username === username && u.password === password);
+    let user = users.find(u => u.username === username & u.password === password);
 
     if (!user) {
         alert("Sai tài khoản hoặc mật khẩu");
         return;
     }
+}
 
-    localStorage.setItem("currentUser", JSON.stringify(user));
+function login() {
     window.location.href = "index.html";
 }
 
 function logout() {
     localStorage.removeItem("currentUser");
     window.location.href = "login.html";
+}
+
+// ================= LOGIN MOCK =================
+function login(username) {
+  localStorage.setItem("user", username);
+  location.reload();
+}
+
+function logout() {
+  localStorage.removeItem("user");
+  location.reload();
+}
+
+function getUser() {
+  return localStorage.getItem("user");
 }
