@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin tức 24h</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #eef1f5;
+        color: #222;
+        font-family: "Inter", sans-serif;
+      }
+
+      .container {
+        width: 1100px;
+        margin: auto;
+      }
+
+      /* Header */
+      .topbar {
+        background: #b00000;
+        color: #fff;
+        padding: 18px 0;
+      }
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+      }
+      .auth {
+        float: right;
+      }
+      .auth a {
+        color: #fff;
+        margin-left: 18px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* Menu */
+      .menu {
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+      }
+      .menu .container {
+        display: flex;
+      }
+      .menu a {
+        padding: 14px 18px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+      }
+      .menu a:hover {
+        color: #b00000;
+      }
+
+      /* Layout */
+      .content {
+        display: flex;
+        gap: 20px;
+        margin: 25px auto;
+      }
+
+      /* Main news */
+      .main-news {
+        flex: 3;
+        background: #fff;
+        padding: 18px;
+        border-radius: 6px;
+      }
+      .main-news h2 {
+        color: #b00000;
+        margin-bottom: 12px;
+      }
+      .headline img {
+        width: 100%;
+        border-radius: 6px;
+        margin: 12px 0;
+      }
+      .headline h3 {
+        font-family: "Merriweather", serif;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      .headline p {
+        font-family: "Merriweather", serif;
+        line-height: 1.6;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        flex: 1;
+        background: #fff;
+        padding: 18px;
+        border-radius: 6px;
+      }
+      .sidebar h2 {
+        color: #b00000;
+        margin-bottom: 10px;
+      }
+      .sidebar ul {
+        list-style: none;
+      }
+      .sidebar li {
+        margin: 12px 0;
+      }
+      .sidebar a {
+        text-decoration: none;
+        color: #333;
+      }
+      .sidebar a:hover {
+        color: #b00000;
+      }
+
+      /* Footer */
+      .footer {
+        background: #fff;
+        border-top: 1px solid #ddd;
+        margin-top: 20px;
+        text-align: center;
+        padding: 18px;
+        color: #666;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="logo">TinTuc24h</div>
+        <div class="auth">
+          <a href="login.html">Đăng nhập</a>
+          <a href="register.html">Đăng ký</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="menu">
+      <div class="container">
+        <a href="#">Thời sự</a>
+        <a href="#">Kinh doanh</a>
+        <a href="#">Thể thao</a>
+        <a href="#">Giải trí</a>
+        <a href="#">Công nghệ</a>
+      </div>
+    </nav>
+
+    <main class="container content">
+      <section class="main-news">
+        <h2>Tin nổi bật</h2>
+        <article class="headline">
+          <img src="https://picsum.photos/800/400" alt="" />
+          <h3>Sự kiện quan trọng trong ngày</h3>
+          <p>
+            Bản tin mô tả ngắn gọn về sự kiện nổi bật đang diễn ra thu hút sự
+            quan tâm của dư luận...
+          </p>
+        </article>
+      </section>
+
+      <aside class="sidebar">
+        <h2>Tin mới</h2>
+        <ul>
+          <li><a href="#">Cập nhật thị trường sáng nay</a></li>
+          <li><a href="#">Đội tuyển chuẩn bị cho giải đấu</a></li>
+          <li><a href="#">Xu hướng công nghệ 2025</a></li>
+          <li><a href="#">Phim mới gây sốt phòng vé</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="footer">© 2026 TinTuc24h. All rights reserved.</footer>
+  </body>
+</html>

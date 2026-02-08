@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #eef1f5;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .auth-box {
+        background: #fff;
+        width: 360px;
+        padding: 30px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #b00000;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #b00000;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 6px;
+        background: #b00000;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      a {
+        color: #b00000;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="auth-box">
+      <h2>Đăng ký</h2>
+      <form id="registerForm">
+        <input type="text" id="name" placeholder="Họ và tên" />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Mật khẩu" />
+        <input type="password" id="confirm" placeholder="Nhập lại mật khẩu" />
+        <button type="submit">Tạo tài khoản</button>
+        <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (
+            !name.value ||
+            !email.value ||
+            !password.value ||
+            !confirm.value
+          ) {
+            alert("Vui lòng điền đầy đủ thông tin!");
+            return;
+          }
+
+          if (password.value !== confirm.value) {
+            alert("Mật khẩu nhập lại không khớp!");
+            return;
+          }
+
+          alert("Đăng ký thành công (demo)!");
+          window.location.href = "login.html";
+        });
+    </script>
+  </body>
+</html>
